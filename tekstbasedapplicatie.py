@@ -2,9 +2,10 @@ from time import sleep
 import os
 clear = lambda: os.system('cls')
 angel = 'miranda'
-keuze1jalist = ['ja','zeker','duh','tuurlijk']
-keuze1neelist = ['nee','nope','zeker niet',]
+keuzejalist = ['ja','zeker','duh','tuurlijk']
+keuzeneelist = ['nee','nope','zeker niet',]
 skilllist = ['great sage', 'skill tame', 'power absoberen']
+mannenstem = ['Onbekende mannen stem']
 
 
 while 1:
@@ -46,7 +47,7 @@ while 1:
 
         print('Onbekende stem: kun je me horen?')
         keuze1 = input()
-        if keuze1 in keuze1jalist:
+        if keuze1 in keuzejalist:
             print('Onbekende stem: geweldig ik ben Miranda ik ben hier om jouw een hergeboorte')
             print('te geven in een andere wereld. één waar zwaard vechten en magie de norm zijn.')
             print(naam,':dit is een grap')
@@ -56,7 +57,51 @@ while 1:
             print(skilllist)
             keuze2 = input('')
             if keuze2 == 'great sage':
-                print()
+                print(angel,': dat is een solid keuze ')
+                sleep(2)
+                print(angel,'de skill : great sage')
+                sleep(2)
+                print(angel,': je kunt nu spreken met de great sage door heb een vraag in je hoofd testellen')
+                sleep(2)
+                print(angel,':alleen kun je het niet al te vaak gebruiken vanwege … bijwerkingen anyway..')
+                sleep(2)
+                print(angel,': good luck met je avontuur ik zorg dat je wakker word naast een dorp waar je kan beginnen')
+                sleep(2)
+                clear()
+                print('kling, kling')
+                sleep(2)
+                print(mannenstem,': ben je nog levend?')
+                sleep(2)
+                print(mannenstem,': hallo?')
+                sleep(2)
+                print('Water word over je heen gegooid')
+                sleep(2)
+                print('je zit gelijk overeind')
+                print(naam,': wat is jouw probleem?')
+                print(mannenstem,': mijn probleem?')
+                print(mannenstem,': ik ben niet degene die bewusteloos ligt buiten de muren van het dorp ')
+                print(mannenstem,': wil je dood ofzo?')
+                print(naam,': dorp? Waar heb je het over?')
+                print(naam,': o wacht dat is wat de god tegen me zei')
+                print(mannenstem,': god?')
+                print('ga je nu vertellen wat er is gebeurd?')
+                keuze3 = input('')
+                if keuze3 in keuzejalist:
+                    print('Je verteld hem over wat je is overkomen')
+                    print(mannenstem,': een onderdaan van god ')
+                    print('Onbekende man word enthousiast')
+                    print(mannenstem,':  we zijn gered eindelijk ')
+                    print(naam,': gered?')
+                    print(mannenstem,': jij komt ons redden van de demonen')
+                    print(naam,': ja dat denk ik toch niet ')
+                    print('Onbekende man zegt het tegen de ridders en vertelt dat je geen intensie hebt de demonen te bevechten.')
+                    print('Je word publiekelijk geëxecuteerd ')
+                    print('wil je opnieuw')
+                    restart = input()
+                    if restart in keuzejalist:
+                        break
+                    elif restart in keuzeneelist:
+                        quit
             elif keuze2 == 'skill tame':
                 print()
             elif keuze2 == 'power absoberen':
@@ -65,7 +110,7 @@ while 1:
                 print('geen optie probeer nog een keer')
 
 
-        elif keuze1 in keuze1neelist:
+        elif keuze1 in keuzeneelist:
             print('Onbekende stem: ha ha ha heel grappig ')
             print(naam,': weet ik ')
             sleep(2)
