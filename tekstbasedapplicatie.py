@@ -30,9 +30,35 @@ def keuze6():
                                 print('')
 
                         elif keuze6 == 'bodyguard':
-                            print()
+                            print(naam,': hoe word je iemands bodyguard')
+                            print('Groenteman: je kan naar de adverturere guild gaan en aangeven dat je een bodyguard wilt zijn')
+                            print(naam,': oke')
+                            print('Je loopt langs een aantal hotels en restaurantjes voor dat je aan komt bij de adventurer guild')
+                            print('Je komt binnen en vraagt aan de receptie hoe word je een bodyguard')
+                            print('Receptionist: ben je al aangesloten aan de guild?')
+                            print(naam,': nee')
+                            print('Receptionist: oke je moet een kleine test doen')
+                            print('Receptionist: wat is 1 + 1')
+                            guildtest = input('')
+                            if guildtest == '2':
+                                print("je bent geslaagd")
+                            else:
+                                print('je bent afgewezen')
+
+
                         elif keuze6 == 'adventurer':
-                            print()
+                            print('Je loopt langs een aantal hotels en restaurantjes voor dat je aan komt bij de adventurer guild ')
+                            print('Je komt binnen en vraagt aan de receptie wat voor banen ze hebben.')
+                            print('Receptionist: ben je al aangesloten bij de guild?')
+                            print(naam,': nee')
+                            print('Receptionist: oke je moet een kleine test doen')
+                            print('Receptionist: wat is 1 + 1')
+                            guildtest = input()
+                            if guildtest == '2':
+                                print('je bent geslaagt')
+                            else:
+                                print('je bent afgewezen')
+
     
 
 while 1:
@@ -192,6 +218,8 @@ while 1:
                                 sleep(2.6)
                                 print('Groenteman: je zou klusjes kunnen doen, je zou een bodyguard kunnen zijn en aan sluiten bij de adventurer guild.')
                                 sleep(2.6)
+                                keuze6()
+                                    
                         else:
                             print('dat is geen optie')
                             clear()
@@ -320,6 +348,26 @@ while 1:
                                 break
                             elif restart in keuzeneelist:
                                 quit
+                        if keuze3 in keuzeneelist:
+                            print('Je houd het voor je.')
+                            sleep(2.6)
+                            print('En de man brengt je in de stad.')
+                            sleep(2.6)
+                            print('Je loop door een gigantische poort die lijkt alsof het uit een fantasie wereld komt.')
+                            sleep(2.6)
+                            print('De man blijkt een bewaker van de gate te zijn waar hij jouw vond.')
+                            sleep(2.6)
+                            print('Hij geeft je een pasje met toestemming om in de stad te blijven.')
+                            sleep(2.6)
+                            print('Je gaat opzoek naar een plaats om te slapen maar je beseft dat je geen geld hebt.')
+                            sleep(2.6)
+                            print('Je raakt in paniek en vraagt je zelf af wat je kan doen en dan herinnerde je wat')
+                            sleep(2.6)
+                            print('Miranda zei je hebt nu de skill great sage en je kon het alles vragen wat je wou en hij zou een antwoord hebben.')
+                            sleep(2.6)
+                            print('ga je great sage gebruiken')
+                            sleep(2.6)
+                            keuze4 = input('')
                 elif keuze2 == 'skil tame':
                     print()
                 elif keuze2 == 'power absoberen':
