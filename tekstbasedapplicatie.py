@@ -234,29 +234,7 @@ while 1:
                         sleep(2.6)
                         print('Groenteman: je zou klusjes kunnen doen, je zou een bodyguard kunnen zijn en aan sluiten bij de adventurer guild.')
                         sleep(2.6)
-                        keuze6 = input('')
-                        if keuze6 == 'klusjes doen':
-                            print(naam,': kan ik iets voor u doen als klusje')
-                            sleep(2.6)
-                            print('Groenteman: je kan die 8 dozen naar achter brengen voor 20 geld stukken')
-                            sleep(2.6)
-                            print('Je draagt de laatste doos naar achter en komt een versleten oude zwaard tegen ')
-                            coins+= 20
-                            
-
-                            #keuze 8 vraag je of je hem mag houden
-                            keuze8 = input('')
-                            if keuze8 in keuzejalist:
-                                oude_zwaard+= 1
-                                print('')
-                            elif keuze8 in keuzeneelist:
-                                oude_zwaard = 0
-                                print('')
-
-                        elif keuze6 == 'bodyguard':
-                            print()
-                        elif keuze6 == 'adventurer':
-                            print()
+                        keuze6()
 
             elif keuze2 == 'skill tame':
                 print()
