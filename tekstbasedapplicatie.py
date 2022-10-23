@@ -17,33 +17,33 @@ def keuze6():
                             print('Groenteman: je kan die 8 dozen naar achter brengen voor 20 geld stukken')
                             sleep(2.6)
                             print('Je draagt de laatste doos naar achter en komt een versleten oude zwaard tegen ')
-                            coins+= 20
+                            coins = coins + 20
                             
 
                             #keuze 8 vraag je of je hem mag houden
-                            keuze8 = input('')
-                            if keuze8 in keuzejalist:
-                                oude_zwaard+= 1
-                                print('')
-                            elif keuze8 in keuzeneelist:
-                                oude_zwaard = 0
-                                print('')
+                            sleep(2.8)
+                            print('vraag je of je hem mag houden?')
+                            keuze8()
 
                         elif keuze6 == 'bodyguard':
                             print(naam,': hoe word je iemands bodyguard')
                             print('Groenteman: je kan naar de adverturere guild gaan en aangeven dat je een bodyguard wilt zijn')
+                            sleep(3)
                             print(naam,': oke')
+                            sleep(3)
                             print('Je loopt langs een aantal hotels en restaurantjes voor dat je aan komt bij de adventurer guild')
+                            sleep(3)
                             print('Je komt binnen en vraagt aan de receptie hoe word je een bodyguard')
+                            sleep(3)
                             print('Receptionist: ben je al aangesloten aan de guild?')
+                            sleep(3)
                             print(naam,': nee')
+                            sleep(3)
                             print('Receptionist: oke je moet een kleine test doen')
+                            sleep(3)
                             print('Receptionist: wat is 1 + 1')
-                            guildtest = input('')
-                            if guildtest == '2':
-                                print("je bent geslaagd")
-                            else:
-                                print('je bent afgewezen')
+                            #keuze 9
+                            guildtest1()
 
 
                         elif keuze6 == 'adventurer':
@@ -53,12 +53,39 @@ def keuze6():
                             print(naam,': nee')
                             print('Receptionist: oke je moet een kleine test doen')
                             print('Receptionist: wat is 1 + 1')
-                            guildtest = input()
-                            if guildtest == '2':
-                                print('je bent geslaagt')
-                            else:
-                                print('je bent afgewezen')
+                            guildtest1()
 
+def keuze8():
+        keuze8 = input('')
+        if keuze8 in keuzejalist:
+            oude_zwaard += 1
+            print(naam,': mag ik hem houden?')
+            sleep(2.5)
+            print('groenteman : tuurlijk, ik heb er niks aan')
+            sleep(3)
+            print('De man geeft je wat voedsel en wijst je de weg naar de hotel als bedankje voor het helpen')
+            print("je komt aan in een hotel die er heel oud uit ziet ")
+            print('hotel-medewerker : 1 nacht kost 5 silver stukken')
+            print(naam,"ik heb alleen maar goudstukken bij me ")
+            print('hotel-medewerker : ...')
+            print('je hoort stemmen aan de achterkant van de hotel')
+            print('je geeft de hotel-medewerker 1 goud stuk ')
+            print('in de nacht word je spullen gestolen en word je vermoord in je slaap')
+
+        elif keuze8 in keuzeneelist:
+            oude_zwaard = 0
+            print('je besluit om niet te vragen om de zwaard tehouden en gaat weg met de 20 goud stukken')
+            sleep(3)
+            print('je zoekt naar een slaap plaats en loopt een steeg in')
+            sleep(3)          
+            print('dieven lopen achter je aan de steeg in en je woord neer gestoken')  
+                          
+def guildtest1():
+    guildtest = input()
+    if guildtest == '2':
+        print('je bent geslaagt')
+    else:
+        print('je bent afgewezen')
     
 
 while 1:
@@ -219,7 +246,7 @@ while 1:
                                 print('Groenteman: je zou klusjes kunnen doen, je zou een bodyguard kunnen zijn en aan sluiten bij de adventurer guild.')
                                 sleep(2.6)
                                 keuze6()
-                                    
+                                sleep(3)          
                         else:
                             print('dat is geen optie')
                             clear()
@@ -235,6 +262,7 @@ while 1:
                         print('Groenteman: je zou klusjes kunnen doen, je zou een bodyguard kunnen zijn en aan sluiten bij de adventurer guild.')
                         sleep(2.6)
                         keuze6()
+                        guildtest1()
 
             elif keuze2 == 'skill tame':
                 print()
