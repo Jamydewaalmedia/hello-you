@@ -9,17 +9,75 @@ mannenstem = ['Onbekende mannen stem']
 sage = ['Great sage']
 oude_zwaard = 0
 coins = 0
+def keuze10a():
+    print("Je besluit een simpele taak aan te nemen. Het verzamelen van brandhout")
+    sleep(3)
+    print('10 jaar later…')
+    sleep(3)
+    print('Grote groep mensen: gejuich')
+    sleep(3)
+    print('Grote groep mensen: het is de sterkte man ter de wereld')
+    sleep(3)
+    print('Grote groep mensen: is het het waar dat jij een kandidaat bent om de nieuwe koning te worden',naam)
+    sleep(3)
+    print(naam,': ja dat klopt al jaren lang is mijn zwaard voor dit land en dat zal nooit veranderen')
+    sleep(3)
+    print('einde koning')
+    sleep(5)
+def keuze10b():
+    print('je wilt toch geen avonturier worden en besluit de rest van je leven mee te helpen op de markt')
+    sleep(3)
+    print('10 jaar later')
+    print('jouw dochter: papa vertel ons jouw levensverhaal nog eens')
+    sleep(3)
+    print(naam,': oke maar daarna moeten jullie echt slapen')
+    sleep(3)
+def keuze9a():
+    print('receptionist : er zijn 2 melding die spoedig een bodyguard nodig hebben ')
+    sleep(3)
+    print(naam,' : doe mij maar de makkelijkste')
+    sleep(3)
+    print('receptionist : bodyguard jobs weet je nooit hoe moeilijk het is ')
+    sleep(3)
+    print('je accepteert de job om iemand te beschermen in het bos ')
+    sleep(3)
+    print('je komt aan in het bos en er verschijnen goblins')
+    sleep(3)
+    print('baas : versla ze')
+    sleep(3)
+    print(naam,'maar, ik heb geen wapens')
+    sleep(3)
+    print('baas:wat?')
+    sleep(3)
+    print('je word vermoord door de goblins')
+    sleep(3)
+def keuze9b():
+    print('Receptionist : je bent nu een f rank avonturier')
+    sleep(3)
+    print('Receptionist :  je kunt alleen taken die f rank hebben nemen')
+    sleep(3)
+    print('Receptionist : hoe meer jobs je doet/ haalt hoe hoger je rank word')
+    sleep(3)
+    print('Receptionist : wil je een taak nemen')
+    keuze10 = input()
+    if keuze10 == 'ja':
+        keuze10a()
+    elif keuze10 == 'nee':
+        keuze10b()
+    else:
+        print('das geen antwoord ')
+    
+
+
+    
 def keuze6():
                         keuze6 = input('')
-                        if keuze6 == 'klusjes doen':
+                        if keuze6 == 'klusjes':
                             print(naam,': kan ik iets voor u doen als klusje')
                             sleep(2.6)
                             print('Groenteman: je kan die 8 dozen naar achter brengen voor 20 geld stukken')
                             sleep(2.6)
                             print('Je draagt de laatste doos naar achter en komt een versleten oude zwaard tegen ')
-                            coins = coins + 20
-                            
-
                             #keuze 8 vraag je of je hem mag houden
                             sleep(2.8)
                             print('vraag je of je hem mag houden?')
@@ -39,11 +97,10 @@ def keuze6():
                             sleep(3)
                             print(naam,': nee')
                             sleep(3)
-                            print('Receptionist: oke je moet een kleine test doen')
-                            sleep(3)
-                            print('Receptionist: wat is 1 + 1')
+                            print('receptionist: dat is zo gedaan')
                             #keuze 9
-                            guildtest1()
+                            keuze9a()
+                            
 
 
                         elif keuze6 == 'adventurer':
@@ -51,14 +108,21 @@ def keuze6():
                             print('Je komt binnen en vraagt aan de receptie wat voor banen ze hebben.')
                             print('Receptionist: ben je al aangesloten bij de guild?')
                             print(naam,': nee')
-                            print('Receptionist: oke je moet een kleine test doen')
-                            print('Receptionist: wat is 1 + 1')
-                            guildtest1()
+                            print('receptionist: nou dat is zo gedaan')
+                            print('klusjes,bodyguard,adventurer')
+                            keuze9b()
+                            
+                             
+
+                            
+                                
+                            
+
+
 
 def keuze8():
         keuze8 = input('')
         if keuze8 in keuzejalist:
-            oude_zwaard += 1
             print(naam,': mag ik hem houden?')
             sleep(2.5)
             print('groenteman : tuurlijk, ik heb er niks aan')
@@ -73,7 +137,7 @@ def keuze8():
             print('in de nacht word je spullen gestolen en word je vermoord in je slaap')
 
         elif keuze8 in keuzeneelist:
-            oude_zwaard = 0
+            
             print('je besluit om niet te vragen om de zwaard tehouden en gaat weg met de 20 goud stukken')
             sleep(3)
             print('je zoekt naar een slaap plaats en loopt een steeg in')
@@ -86,6 +150,7 @@ def guildtest1():
         print('je bent geslaagt')
     else:
         print('je bent afgewezen')
+        
     
 
 while 1:
@@ -138,12 +203,11 @@ while 1:
             sleep(2.6)
             print(naam,':hoe weet je mijn naam?')
             sleep(2.6)
-            print(angel,': ik heb hier geen tijd voor je kunt 3 skills kiezen voor je nieuwe leven kies wijs')
+            print(angel,': ik heb hier geen tijd voor je krijgt de  skill great sage voor je nieuwe leven zeg great sage om te bevestigen')
             sleep(2.6)
-            print(skilllist)
             keuze2 = input('')
             if keuze2 == 'great sage':
-                print(angel,': dat is een solid keuze ')
+                print(angel,': perfect ')
                 sleep(2)
                 print(angel,'de skill : great sage')
                 sleep(2)
@@ -229,11 +293,70 @@ while 1:
                     keuze4 = input('')
                     if keuze4 in keuzejalist:
                         print(sage,': er is een dungeon 4 km van de west gate vandaan je kunt daar makelijk schatten vinden.')
+                        sleep(3)
                         print('ga je naar de dungeon of ga je verder door de stad zoeken')
+                        sleep(3)
                         print('dungeon of verder kijken')
                         keuze5 = input('')
                         if keuze5 == 'dungeon':
-                            print()
+                            print('Je besluit naar de dungeon te gaan. Onderweg kom je een bos tegen')
+                            print('ga je items verzammelen in het bos ja/nee?')
+                            keuze7 = input()
+                            if keuze7 in keuzejalist:
+                                print('Je loopt in de bos en je vindt een tak,klimop en een steen')
+                                sleep(3)
+                                print('Je maakt een stenen bijl')
+                                sleep(3)
+                                print('Verder op zie je het pad weer richting  de dungeon.')
+                                sleep(3)
+                                print('Na 2 uur bereik je eindelijk de dungeon')
+                                sleep(3)
+                                print('De deur gaat krakend open')
+                                sleep(3)
+                                print('Je loopt de eerste kamer binnen')
+                                sleep(3)
+                                print('De vuur korven gaan automatisch aan ')
+                                sleep(3)
+                                print('Je komt een goblin tegen')
+                                sleep(3)
+                                print('Je hakt in 1 slag ze hoofd er af met je bijl ')
+                                sleep(3)
+                                print('pak je zijn mes op?')
+                                keuze11 = input()
+                                if keuze11 in keuzejalist:
+                                    print('ja je pakt het mes op en laat je bijl achter')
+                                    sleep(3)
+                                    print('in de volgende kamer kom je een goblin tegen met een houten shild en een zwaard')
+                                    sleep(3)
+                                    print('je slaat met je mes maar de goblin blokt het met zijn schild en hij snijd je nek door')
+                                    sleep(3)
+                                    break
+                                elif keuze11 in keuzeneelist:
+                                    print('je laat de mes achter en gaat verder met een bijl ')
+                                    sleep(3)
+                                    print('in de volgende kamer kom je een goblin tegen')
+                                    sleep(3)
+                                    print('met een zwaar en een schild ')
+                                    sleep(3)
+                                    print('je slaat met je bijl ')
+                                    sleep(3)
+                                    print('de goblin blokt het ')
+                                    sleep(3)
+                                    print('maar je hakt door het houten schild heen ')
+                                    print('*biep* :  level up')
+                                    print('Je gaat naar de volgende kamer ')
+                                    sleep(3)
+                                    print('*boem boem boem*')
+                                    print('Boss kamer opent')
+                                    sleep(4)
+                                    print('Je kan niet meer ontsnappen en word gedwongen te vechten ')
+                                    sleep(3)
+                                    print('Het is een minotaurs')
+                                    print('Je had geen schijn van kans alleen en ging binnen secondes dood')
+                                    sleep(8)
+                                    break
+
+
                         elif keuze5 == 'verder kijken':
                                 print('Je besluit om rond te kijken en je vind een markt.')
                                 sleep(2.6)
@@ -246,7 +369,8 @@ while 1:
                                 print('Groenteman: je zou klusjes kunnen doen, je zou een bodyguard kunnen zijn en aan sluiten bij de adventurer guild.')
                                 sleep(2.6)
                                 keuze6()
-                                sleep(3)          
+                                break
+                                        
                         else:
                             print('dat is geen optie')
                             clear()
@@ -262,12 +386,7 @@ while 1:
                         print('Groenteman: je zou klusjes kunnen doen, je zou een bodyguard kunnen zijn en aan sluiten bij de adventurer guild.')
                         sleep(2.6)
                         keuze6()
-                        guildtest1()
-
-            elif keuze2 == 'skill tame':
-                print()
-            elif keuze2 == 'power absoberen':
-                print()
+                        break
             else:
                 print('geen optie probeer nog een keer')
 
@@ -281,16 +400,15 @@ while 1:
             print(angel,': ik had een speech klaar staan maar daar heb ik geen zin meer in.')
             sleep(2)
             while 1:
-                print(angel,': kort samengevat je gaat naar een nieuwe wereld je hebt keuze tussen 3 skills')
+                print(angel,': kort samengevat je gaat naar een nieuwe wereld je krijgt de skill great sage zeg great sage om het te bevestigen')
                 sleep(2)
                 print(angel,': kies wijs of niet. het boeit mij niet meer')
                 sleep(2)
                 print(naam,': wacht wat?')
                 sleep(2)
-                print(skilllist)
                 keuze2 = input('')
                 if keuze2 == 'great sage':
-                        print(angel,': dat is een solid keuze ')
+                        print(angel,': perfect ')
                         sleep(2)
                         print(angel,'de skill : great sage')
                         sleep(2)
@@ -374,10 +492,20 @@ while 1:
                             print('ga je great sage gebruiken')
                             sleep(2.6)
                             keuze4 = input('')
-                elif keuze2 == 'skil tame':
-                    print()
-                elif keuze2 == 'power absoberen':
-                    print()
+                            if keuze4 in keuzejalist:
+                                print('Je besluit om rond te kijken en je vind een markt.')
+                        sleep(2.6)
+                        print('Groenteman: he knul wil je wat fruit het is het verste uit de hele stad')
+                        sleep(2.6)
+                        print(naam,': ik heb geen geld, weet u een manier om makelijk geld teverdienen.')
+                        sleep(2.6)
+                        print('Groenteman: hmm…')
+                        sleep(2.6)
+                        print('Groenteman: je zou klusjes kunnen doen, je zou een bodyguard kunnen zijn en aan sluiten bij de adventurer guild.')
+                        sleep(2.6)
+                        keuze6()
+                        break
+
                 else:
                     print('geen optie probeer nog een keer')
         else:
